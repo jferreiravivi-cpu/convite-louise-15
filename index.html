@@ -3,125 +3,335 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#100b24">
-  <meta name="description" content="Convite dos 15 anos de Louise Victória">
-  <title>Louise Victória • 15 anos</title>
+  <title>Louise Victória | 15 Anos</title>
+  <!-- Fonte elegante e fina (Cinzel & Cormorant Garamond) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #0f0a1e;
+      --purple-main: #7b2cbf;
+      --purple-light: #9d4edd;
+      --pool-blue: #70d6ff;
+      --gold: #e5a93c;
+      --text-color: #f8f9fa;
+      --card-bg: rgba(255, 255, 255, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--bg-dark), #1a0933, #081c38);
+      color: var(--text-color);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding-bottom: 50px;
+      overflow-x: hidden;
+    }
+
+    .stars-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      background: radial-gradient(circle at 50% 20%, rgba(157, 78, 221, 0.15), transparent 70%),
+                  radial-gradient(circle at 80% 80%, rgba(0, 180, 216, 0.15), transparent 70%);
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .subtitle-phrase {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--gold);
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    /* Nome com Fonte Fine Line e Gradiente Personalizado */
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-weight: 400;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      background: linear-gradient(135deg, var(--pool-blue) 0%, #b8c0ff 25%, var(--purple-light) 50%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 5px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 5px 18px;
+      border: 1px solid var(--gold);
+      border-radius: 20px;
+      color: var(--gold);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 25px 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      color: var(--pool-blue);
+      margin-bottom: 15px;
+    }
+
+    /* Contagem Regressiva */
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .time-box {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 12px 5px;
+      border-radius: 12px;
+      border: 1px solid rgba(157, 78, 221, 0.3);
+    }
+
+    .time-box span {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--gold);
+    }
+
+    .time-box small {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: #aaa;
+    }
+
+    /* Botões */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-wsp {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .btn-maps {
+      background: linear-gradient(45deg, #4285f4, #34a853);
+      color: #fff;
+    }
+
+    .btn-cal {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    /* Dicas Pool Party */
+    .pool-list {
+      list-style: none;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .pool-list li::before {
+      content: "💦 ";
+    }
+
+    /* Categorias da Lista de Presentes */
+    .gift-category {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .gift-category h3 {
+      font-size: 1rem;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .gift-category p {
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
-  <div class="stars" aria-hidden="true">✦　·　✧　·　✦　·　✧</div>
 
-  <header class="hero">
-    <div class="orb orb-one"></div><div class="orb orb-two"></div>
-    <div class="pokemon-mark hoopa" aria-hidden="true">✦</div>
-    <div class="pokemon-mark oshawott" aria-hidden="true">◒</div>
-    <div class="hero-content">
-      <p class="eyebrow">VOCÊ ESTÁ CONVIDADO</p>
-      <h1>Louise<br><span>Victória</span></h1>
-      <div class="age">15</div>
-      <p class="journey">“Uma nova Jornada se inicia...”</p>
-      <p class="date">03 • 10 • 2026</p>
-      <p class="time">14:00H</p>
-      <button class="outline-btn" onclick="document.getElementById('detalhes').scrollIntoView({behavior:'smooth'})">ABRIR CONVITE ↓</button>
-    </div>
-  </header>
+  <div class="stars-overlay"></div>
 
-  <main>
-    <section class="section intro">
-      <p class="eyebrow">UM DIA PARA GUARDAR</p>
-      <h2>Vamos celebrar juntos?</h2>
-      <p>Chegou o momento de celebrar uma nova fase, novos sonhos e uma nova jornada. Louise Victória completa 15 anos e quer viver esse dia cercada por pessoas especiais.</p>
+  <div class="container">
+    
+    <!-- Cabeçalho -->
+    <header>
+      <p class="subtitle-phrase">“Uma nova Jornada se inicia...”</p>
+      <h1>Louise Victória</h1>
+      <div class="badge">MEUS 15 ANOS</div>
+    </header>
+
+    <!-- Convite -->
+    <section class="card">
+      <h2>✨ O Convite ✨</h2>
+      <p style="line-height: 1.6; margin-bottom: 15px;">
+        Prepare o seu traje de banho e venha comemorar comigo esse momento inesquecível em uma super Pool Party!
+      </p>
+      <p><strong>📅 Data:</strong> 03/10/2026</p>
+      <p><strong>⏰ Horário:</strong> 14:00h</p>
     </section>
 
-    <section id="detalhes" class="section cards">
-      <article class="card"><div class="icon">📅</div><h3>Data</h3><p>03 de outubro de 2026</p></article>
-      <article class="card"><div class="icon">⏰</div><h3>Horário</h3><p>14:00h</p></article>
-      <article class="card"><div class="icon">📍</div><h3>Local</h3><p>Rancho Xavier<br>Rua Toca do Coelho</p><a class="link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Rancho%20Xavier%2C%20Rua%20Toca%20do%20Coelho">ABRIR NO MAPA →</a></article>
-    </section>
-
-    <section class="section rsvp">
-      <p class="eyebrow">SUA PRESENÇA É ESPECIAL</p>
-      <h2>Você vem?</h2>
-      <p>Confirme sua presença até <strong>30 de setembro de 2026</strong>.</p>
-      <a class="primary" target="_blank" rel="noopener" href="https://wa.me/5511963910837?text=Ol%C3%A1%21%20Confirmo%20minha%20presen%C3%A7a%20nos%2015%20anos%20da%20Louise%20Vict%C3%B3ria.%20%F0%9F%92%9C">CONFIRMAR PRESENÇA 💜</a>
-      <p class="hint">O WhatsApp abrirá com uma mensagem pronta. Você poderá acrescentar o nome do convidado.</p>
-    </section>
-
-    <section class="section countdown">
-      <p class="eyebrow">CONTAGEM REGRESSIVA</p>
-      <h2>Até o grande dia</h2>
-      <div class="timer">
-        <div><b id="days">00</b><span>dias</span></div>
-        <div><b id="hours">00</b><span>horas</span></div>
-        <div><b id="minutes">00</b><span>minutos</span></div>
-        <div><b id="seconds">00</b><span>segundos</span></div>
+    <!-- Contagem Regressiva -->
+    <section class="card">
+      <h2>⏳ Contagem Regressiva</h2>
+      <div class="countdown-grid">
+        <div class="time-box"><span id="days">00</span><small>Dias</small></div>
+        <div class="time-box"><span id="hours">00</span><small>Horas</small></div>
+        <div class="time-box"><span id="minutes">00</span><small>Min</small></div>
+        <div class="time-box"><span id="seconds">00</span><small>Seg</small></div>
       </div>
     </section>
 
-    <section class="section pool">
-      <p class="eyebrow">POOL PARTY 💦</p>
-      <h2>Vem preparado!</h2>
-      <p>Será uma festa na piscina! Escolha roupas leves e confortáveis e venha pronto para aproveitar muito.</p>
-      <div class="tips">
-        <div>👗<strong>Roupas leves</strong></div>
-        <div>🩱<strong>Roupa de banho</strong></div>
-        <div>🧺<strong>Toalha</strong></div>
-        <div>🩴<strong>Chinelo</strong></div>
-        <div>🧴<strong>Protetor solar</strong></div>
-        <div>😎<strong>Óculos de sol</strong></div>
+    <!-- RSVP -->
+    <section class="card">
+      <h2>✅ Confirmação de Presença</h2>
+      <p style="font-size: 0.9rem; margin-bottom: 12px;">Por gentileza, confirme sua presença até o dia <strong>30/09/2026</strong>.</p>
+      <!-- Link do WhatsApp com mensagem pré-formatada -->
+      <a href="https://wa.me/5511963910837?text=Ol%C3%A1,%20confirmo%20minha%20presen%C3%A7a%20nos%2015%20anos%20da%20Louise%20Vict%C3%B3ria%20%F0%9F%92%9C%20(coloque%20o%20seu%20nome%20e%20de%20sua%20fam%C3%ADlia):%20" target="_blank" class="btn btn-wsp">
+        Confirmar pelo WhatsApp
+      </a>
+    </section>
+
+    <!-- Localização -->
+    <section class="card">
+      <h2>📍 Como Chegar</h2>
+      <p><strong>Rancho Xavier</strong></p>
+      <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 10px;">Rua Toca do Coelho</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Rancho+Xavier+Rua+Toca+do+Coelho" target="_blank" class="btn btn-maps">
+        Abrir no Google Maps
+      </a>
+      <!-- Link direto para adicionar no Google Agenda -->
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Louise+Vict%C3%B3ria+%E2%80%94+15+Anos&dates=20261003T170000Z/20261003T230000Z&details=Pool+Party+de+15+Anos+da+Louise+Vict%C3%B3ria!&location=Rancho+Xavier+-+Rua+Toca+do+Coelho" target="_blank" class="btn btn-cal">
+        📅 Adicionar à Agenda
+      </a>
+    </section>
+
+    <!-- Dicas Pool Party -->
+    <section class="card">
+      <h2>🌊 Pool Party & Dress Code</h2>
+      <ul class="pool-list">
+        <li>Usar roupas leves e confortáveis.</li>
+        <li>Não esqueça sua roupa de banho!</li>
+        <li>Traga sua toalha de praia/piscina.</li>
+        <li>Aproveite o dia ao máximo!</li>
+      </ul>
+    </section>
+
+    <!-- Lista de Presentes -->
+    <section class="card">
+      <h2>🎁 Sugestões de Presentes</h2>
+      <p style="font-size: 0.85rem; margin-bottom: 15px; color: #aaa;">Sua presença é o meu maior presente! Caso queira me presentear, aqui estão algumas sugestões:</p>
+
+      <div class="gift-category">
+        <h3>✨ Mimos / Pix</h3>
+        <p>Cotas de contribuição para realizar meus projetos e sonhos.</p>
+      </div>
+
+      <div class="gift-category">
+        <h3>👗 Roupas & Acessórios</h3>
+        <p>Estilo leve, jovem e casual.</p>
+      </div>
+
+      <div class="gift-category">
+        <h3>💄 Beleza & Cuidados</h3>
+        <p>Maquiagens, perfumes doces/suaves e itens de skincare.</p>
+      </div>
+
+      <div class="gift-category">
+        <h3>📚 Livros & Papelaria</h3>
+        <p>Leituras e materiais de papelaria fofos.</p>
       </div>
     </section>
 
-    <section class="section gifts">
-      <p class="eyebrow">COM CARINHO</p>
-      <h2>Lista de presentes 🎁</h2>
-      <p>Sua presença já é o nosso maior presente. Se quiser presentear a Louise, estas são as categorias que escolhemos.</p>
-      <div class="gift-grid">
-        <article class="gift"><span>💄</span><h3>Beleza</h3><p>Perfumes, maquiagem e cuidados pessoais.</p></article>
-        <article class="gift"><span>👗</span><h3>Moda & acessórios</h3><p>Roupas, bolsas, bijuterias e acessórios.</p></article>
-        <article class="gift"><span>📚</span><h3>Livros</h3><p>Livros e itens para leitura.</p></article>
-        <article class="gift"><span>🎧</span><h3>Tecnologia</h3><p>Fones, acessórios e itens tecnológicos.</p></article>
-        <article class="gift"><span>💜</span><h3>Outros mimos</h3><p>Aquele presente escolhido com carinho.</p></article>
-        <article class="gift"><span>💸</span><h3>Pix</h3><p>Uma contribuição para um sonho especial da Louise.</p></article>
-      </div>
-      <p class="hint">Os produtos e links específicos podem ser adicionados depois.</p>
-    </section>
+  </div>
 
-    <section class="section gallery">
-      <p class="eyebrow">A NOSSA LOUISE</p>
-      <h2>15 anos de histórias</h2>
-      <div class="photo-grid">
-        <div class="photo"><span>ADICIONE UMA FOTO</span></div>
-        <div class="photo"><span>ADICIONE UMA FOTO</span></div>
-        <div class="photo"><span>ADICIONE UMA FOTO</span></div>
-      </div>
-      <p class="hint">Para colocar fotos, substitua os blocos pelos arquivos da Louise seguindo as instruções no README.</p>
-    </section>
+  <!-- Script da Contagem Regressiva Corrigido -->
+  <script>
+    function updateCountdown() {
+      // Data do evento: 03/10/2026 às 14:00:00 (Horário local)
+      const targetDate = new Date("2026-10-03T14:00:00").getTime();
+      const now = new Date().getTime();
+      const difference = targetDate - now;
 
-    <section class="section message">
-      <div class="quote">“</div>
-      <h2>Uma nova Jornada se inicia...</h2>
-      <p>E eu quero você comigo para celebrar cada passo desse novo capítulo. Que esse dia seja leve, divertido e cheio de memórias para guardar para sempre.</p>
-      <div class="signature">Louise Victória</div>
-    </section>
+      if (difference <= 0) {
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+        return;
+      }
 
-    <section class="section calendar">
-      <p class="eyebrow">NÃO ESQUEÇA</p>
-      <h2>Salve a data 💙</h2>
-      <a class="primary" href="javascript:void(0)" onclick="downloadCalendar()">ADICIONAR À AGENDA</a>
-    </section>
-  </main>
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-  <footer>
-    <div class="footer-symbol">✦</div>
-    <h2>Louise Victória</h2>
-    <p>15 anos • 03.10.2026</p>
-    <p class="tiny">“Uma nova Jornada se inicia...”</p>
-  </footer>
+      document.getElementById("days").innerText = String(days).padStart(2, "0");
+      document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+      document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
+      document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
+    }
 
-  <script src="script.js"></script>
+    // Executa a função imediatamente e atualiza a cada 1 segundo
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
