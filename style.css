@@ -1,0 +1,53 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0b0816;color:#f8f6ff;font-family:Montserrat,Arial,sans-serif;line-height:1.6}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 50% 25%,#3a2c70 0,#17102e 40%,#080611 82%)}
+.hero:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-16%;height:42%;background:radial-gradient(ellipse at center,rgba(74,205,232,.22),transparent 62%);filter:blur(12px)}
+.hero-content{text-align:center;position:relative;z-index:2;padding:30px 18px}
+.orb{position:absolute;border-radius:50%;filter:blur(2px);opacity:.25}
+.orb-one{width:40vw;height:40vw;max-width:430px;max-height:430px;left:-15%;top:10%;background:radial-gradient(circle,#a57cff,transparent 68%)}
+.orb-two{width:35vw;height:35vw;max-width:380px;max-height:380px;right:-12%;bottom:8%;background:radial-gradient(circle,#50d7ef,transparent 68%)}
+.eyebrow{margin:0 0 16px;color:#bcb1ff;font-size:.7rem;font-weight:700;letter-spacing:4px}
+h1,h2,h3{font-family:Cinzel,Georgia,serif}
+.hero h1{font-size:clamp(3.1rem,14vw,7rem);line-height:.9;letter-spacing:3px;text-transform:uppercase;margin:0;font-weight:600}
+.hero h1 span{color:#ddd5ff}
+.age{font-family:Cinzel,Georgia,serif;font-size:5.5rem;line-height:1;margin:28px 0 4px;background:linear-gradient(#fff,#b5ecff,#a783ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.journey{font-family:Cinzel,Georgia,serif;font-style:italic;font-size:1.05rem}
+.date{letter-spacing:6px;color:#b9efff;font-weight:700;margin:20px 0 2px}
+.time{font-weight:700;letter-spacing:3px}
+.outline-btn,.primary{display:inline-block;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:13px 22px;color:#fff;text-decoration:none;font-weight:700;cursor:pointer;background:rgba(255,255,255,.07);backdrop-filter:blur(8px);transition:.25s}
+.primary{background:linear-gradient(135deg,#8066d9,#48bdd3);border:0;box-shadow:0 14px 36px rgba(70,190,220,.18)}
+.outline-btn:hover,.primary:hover{transform:translateY(-2px)}
+.section{max-width:1060px;margin:auto;padding:90px 20px;text-align:center}
+.section h2{font-size:clamp(2rem,7vw,3.3rem);line-height:1.15;margin:0 0 20px}
+.section p{max-width:760px;margin:0 auto 22px;color:#d7d1e6}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card,.gift{padding:28px 18px;border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);box-shadow:0 20px 50px rgba(0,0,0,.16)}
+.icon,.gift span{font-size:2rem}
+.card h3,.gift h3{margin:9px 0 5px}
+.card p{margin-bottom:9px}
+.link{color:#aeefff;text-decoration:none;font-weight:700;font-size:.85rem}
+.rsvp{background:radial-gradient(circle,rgba(125,96,214,.17),transparent 65%);border-radius:30px}
+.hint{font-size:.78rem!important;color:#8f889f!important}
+.timer{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:720px;margin:30px auto 0}
+.timer div{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:18px 8px}
+.timer b{display:block;font-family:Cinzel,serif;font-size:2.25rem;color:#bcefff}
+.timer span{font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:#aaa3ba}
+.pool{background:linear-gradient(180deg,rgba(60,203,231,.08),transparent);border-radius:30px}
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:780px;margin:30px auto 0}
+.tips div{display:flex;flex-direction:column;gap:6px;padding:18px;border-radius:18px;background:rgba(82,195,221,.07);border:1px solid rgba(130,222,238,.1)}
+.gift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.photo{min-height:270px;border-radius:22px;border:1px dashed rgba(255,255,255,.22);background:linear-gradient(145deg,#292142,#151028);display:flex;align-items:center;justify-content:center;color:#8f88a2;font-size:.72rem;letter-spacing:2px}
+.message .quote{font-family:Georgia,serif;font-size:6rem;line-height:.6;color:#a989ff}
+.signature{font-family:Cinzel,serif;color:#bdefff;font-size:1.2rem;margin-top:25px}
+.calendar{padding-bottom:120px}
+footer{text-align:center;padding:70px 20px;background:#07050e;border-top:1px solid rgba(255,255,255,.08)}
+footer h2{margin:5px 0}
+.footer-symbol{font-size:2rem;color:#b995ff}
+.tiny{font-size:.72rem;color:#6f687c}
+.pokemon-mark{position:absolute;z-index:1;font-size:8rem;opacity:.11;filter:blur(.3px)}
+.hoopa{top:12%;left:6%;color:#b08bff}
+.oshawott{right:7%;bottom:10%;color:#62d7ef;transform:rotate(-20deg)}
+.stars{position:fixed;top:12%;left:4%;z-index:5;opacity:.16;color:#fff;letter-spacing:12px;pointer-events:none}
+@media(max-width:720px){.cards,.gift-grid{grid-template-columns:1fr}.tips{grid-template-columns:repeat(2,1fr)}.photo-grid{grid-template-columns:1fr 1fr}.photo{min-height:190px}.timer{gap:7px}.timer b{font-size:1.55rem}.timer span{font-size:.56rem}.hero h1{font-size:3.1rem}.pokemon-mark{font-size:5rem}.section{padding:70px 17px}}
