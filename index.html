@@ -11,19 +11,19 @@
   <style>
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:#0d1838;color:#f8f6ff;font-family:Montserrat,Arial,sans-serif;line-height:1.6}
+    body{margin:0;background:#130a2a;color:#f8f6ff;font-family:Montserrat,Arial,sans-serif;line-height:1.6}
     
-    /* Fundo com tons mais azulados estilo piscina iluminada */
-    .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 50% 30%,#2d3b82 0,#142354 50%,#09122c 90%)}
-    .hero:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-16%;height:45%;background:radial-gradient(ellipse at center,rgba(72,219,251,.4),transparent 65%);filter:blur(14px)}
+    /* Fundo Roxo, Lilás e Dourado */
+    .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 50% 30%,#3d1f6d 0,#200d43 50%,#0e0521 90%)}
+    .hero:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-16%;height:45%;background:radial-gradient(ellipse at center,rgba(229,169,60,.25),transparent 65%);filter:blur(14px)}
     .hero-content{text-align:center;position:relative;z-index:2;padding:30px 18px}
     
     /* Orbes Iluminados */
-    .orb{position:absolute;border-radius:50%;filter:blur(10px);opacity:.4}
-    .orb-one{width:45vw;height:45vw;max-width:480px;max-height:480px;left:-10%;top:8%;background:radial-gradient(circle,#a57cff,transparent 70%)}
-    .orb-two{width:40vw;height:40vw;max-width:420px;max-height:420px;right:-10%;bottom:6%;background:radial-gradient(circle,#48dbfb,transparent 70%)}
+    .orb{position:absolute;border-radius:50%;filter:blur(10px);opacity:.45}
+    .orb-one{width:45vw;height:45vw;max-width:480px;max-height:480px;left:-10%;top:8%;background:radial-gradient(circle,#b368ff,transparent 70%)}
+    .orb-two{width:40vw;height:40vw;max-width:420px;max-height:420px;right:-10%;bottom:6%;background:radial-gradient(circle,#e5a93c,transparent 70%)}
     
-    .eyebrow{margin:0 0 16px;color:#b9efff;font-size:.75rem;font-weight:700;letter-spacing:4px}
+    .eyebrow{margin:0 0 16px;color:#d4b3ff;font-size:.75rem;font-weight:700;letter-spacing:4px}
     h1,h2,h3{font-family:'Cinzel',Georgia,serif}
     
     /* Nome em Dourado Translúcido */
@@ -41,48 +41,48 @@
       text-shadow: 0 4px 25px rgba(229, 169, 60, 0.4);
     }
     
-    .age{font-family:'Cinzel',Georgia,serif;font-size:5.5rem;line-height:1;margin:24px 0 4px;background:linear-gradient(#ffffff,#48dbfb,#b589ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .journey{font-family:'Cinzel',Georgia,serif;font-style:italic;font-size:1.15rem;color:#e3f8ff;margin-top:10px}
-    .date{letter-spacing:6px;color:#48dbfb;font-weight:700;margin:20px 0 2px}
+    .age{font-family:'Cinzel',Georgia,serif;font-size:5.5rem;line-height:1;margin:24px 0 4px;background:linear-gradient(#ffffff,#d4b3ff,#ffe699);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .journey{font-family:'Cinzel',Georgia,serif;font-style:italic;font-size:1.15rem;color:#f1e6ff;margin-top:10px}
+    .date{letter-spacing:6px;color:#d4b3ff;font-weight:700;margin:20px 0 2px}
     .time{font-weight:700;letter-spacing:3px;color:#ffe699}
     
     /* Botões */
-    .outline-btn,.primary{display:inline-block;border:1px solid rgba(225,169,60,.5);border-radius:999px;padding:14px 26px;color:#fff;text-decoration:none;font-weight:700;cursor:pointer;background:rgba(255,255,255,.09);backdrop-filter:blur(8px);transition:.25s}
-    .primary{background:linear-gradient(135deg,#8066d9,#32b2d4);border:0;box-shadow:0 14px 36px rgba(72,219,251,.3)}
+    .outline-btn,.primary{display:inline-block;border:1px solid rgba(225,169,60,.6);border-radius:999px;padding:14px 26px;color:#fff;text-decoration:none;font-weight:700;cursor:pointer;background:rgba(255,255,255,.09);backdrop-filter:blur(8px);transition:.25s}
+    .primary{background:linear-gradient(135deg,#9d4edd,#e5a93c);border:0;box-shadow:0 14px 36px rgba(157,78,221,.35)}
     .outline-btn:hover,.primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(229,169,60,.4)}
     
     /* Seções e Cards */
     .section{max-width:1060px;margin:auto;padding:80px 20px;text-align:center}
     .section h2{font-size:clamp(2rem,7vw,3.2rem);line-height:1.15;margin:0 0 20px;color:#f3e8ff}
-    .section p{max-width:760px;margin:0 auto 22px;color:#d8edff}
+    .section p{max-width:760px;margin:0 auto 22px;color:#ebdcfc}
     
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card,.gift-box{padding:28px 20px;border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.03));border:1px solid rgba(72,219,251,.25);box-shadow:0 20px 50px rgba(0,0,0,.25)}
+    .card,.gift-box{padding:28px 20px;border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.03));border:1px solid rgba(229,169,60,.3);box-shadow:0 20px 50px rgba(0,0,0,.3)}
     .icon{font-size:2.2rem;margin-bottom:10px}
     .card h3{margin:9px 0 5px;color:#ffe699}
-    .link{color:#48dbfb;text-decoration:none;font-weight:700;font-size:.85rem}
+    .link{color:#d4b3ff;text-decoration:none;font-weight:700;font-size:.85rem}
     
-    .rsvp{background:radial-gradient(circle,rgba(72,219,251,.2),transparent 70%);border-radius:30px}
-    .hint{font-size:.8rem!important;color:#b0d3ee!important}
+    .rsvp{background:radial-gradient(circle,rgba(157,78,221,.3),transparent 70%);border-radius:30px}
+    .hint{font-size:.8rem!important;color:#d4c4ee!important}
     
     /* Timer */
     .timer{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:720px;margin:30px auto 0}
-    .timer div{background:rgba(255,255,255,.08);border:1px solid rgba(72,219,251,.3);border-radius:18px;padding:18px 8px}
-    .timer b{display:block;font-family:'Cinzel',serif;font-size:2.3rem;color:#48dbfb}
-    .timer span{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:#c0e4ff}
+    .timer div{background:rgba(255,255,255,.08);border:1px solid rgba(229,169,60,.3);border-radius:18px;padding:18px 8px}
+    .timer b{display:block;font-family:'Cinzel',serif;font-size:2.3rem;color:#ffe699}
+    .timer span{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:#e8d5ff}
     
-    .pool{background:linear-gradient(180deg,rgba(72,219,251,.15),transparent);border-radius:30px}
+    .pool{background:linear-gradient(180deg,rgba(157,78,221,.18),transparent);border-radius:30px}
     .tips{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:780px;margin:30px auto 0}
-    .tips div{display:flex;flex-direction:column;gap:6px;padding:18px;border-radius:18px;background:rgba(72,219,251,.12);border:1px solid rgba(72,219,251,.25)}
+    .tips div{display:flex;flex-direction:column;gap:6px;padding:18px;border-radius:18px;background:rgba(157,78,221,.15);border:1px solid rgba(229,169,60,.3)}
     
     /* Galeria da Jornada */
     .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
-    .photo-card{border-radius:20px;overflow:hidden;border:1px solid rgba(72,219,251,.3);background:rgba(0,0,0,.3);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+    .photo-card{border-radius:20px;overflow:hidden;border:2px solid rgba(229,169,60,.4);background:rgba(0,0,0,.3);box-shadow:0 10px 30px rgba(0,0,0,.4)}
     .photo-card img{width:100%;height:320px;object-fit:cover;display:block;transition:transform .4s}
     .photo-card:hover img{transform:scale(1.05)}
 
     /* Player de Música Flutuante */
-    .music-control{position:fixed;bottom:20px;right:20px;z-index:99;background:linear-gradient(135deg,#8066d9,#32b2d4);border:2px solid #ffe699;border-radius:50px;padding:12px 20px;color:#fff;display:flex;align-items:center;gap:10px;font-weight:700;font-size:.85rem;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:.3s}
+    .music-control{position:fixed;bottom:20px;right:20px;z-index:99;background:linear-gradient(135deg,#9d4edd,#e5a93c);border:2px solid #ffe699;border-radius:50px;padding:12px 20px;color:#fff;display:flex;align-items:center;gap:10px;font-weight:700;font-size:.85rem;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:.3s}
     .music-control:hover{transform:scale(1.05)}
 
     /* Animações Oshawott */
@@ -96,7 +96,7 @@
     }
 
     .stars{position:fixed;top:10%;left:4%;z-index:5;opacity:.25;color:#ffe699;letter-spacing:12px;pointer-events:none}
-    footer{text-align:center;padding:60px 20px;background:#060d21;border-top:1px solid rgba(255,255,255,.1)}
+    footer{text-align:center;padding:60px 20px;background:#090317;border-top:1px solid rgba(255,255,255,.1)}
     
     @media(max-width:720px){
       .cards,.tips,.photo-grid{grid-template-columns:1fr}
@@ -114,13 +114,14 @@
   <div class="stars">✦ ✦ ✦</div>
 
   <!-- Player de Música Flutuante -->
-  <div class="music-control" id="musicBtn">
+  <div class="music-control" id="musicBtn" onclick="toggleMusic()">
     <span id="musicIcon">🎵</span>
     <span id="musicText">Toque para Ouvir 🎵</span>
   </div>
   
+  <!-- Áudio tema direto e estável -->
   <audio id="bgAudio" loop preload="auto">
-    <source src="https://assets.mixkit.co/music/preview/mixkit-game-level-music-689.mp3" type="audio/mpeg">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73223.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Hero Section -->
@@ -174,7 +175,7 @@
     <h2>Confirmação de Presença</h2>
     <p>Por gentileza, confirme sua presença até o dia <strong>30/09/2026</strong> para organizarmos tudo com carinho!</p>
     <a href="https://wa.me/5511963910837?text=Ol%C3%A1,%20confirmo%20minha%20presen%C3%A7a%20nos%2015%20anos%20da%20Louise%20Vict%C3%B3ria%20%F0%9F%92%9C%20(coloque%20o%20seu%20nome%20e%20de%20sua%20fam%C3%ADlia):%20" target="_blank" class="primary" style="font-size: 1.1rem; padding: 16px 32px;">
-      CONFIRMAR PELO WHATSAPP 💜​
+      CONFIRMAR PELO WHATSAPP 💜
     </a>
     <p class="hint" style="margin-top: 15px;">A mensagem já vai preenchida, é só colocar o seu nome e o de sua família!</p>
   </section>
@@ -197,13 +198,13 @@
     
     <div class="photo-grid">
       <div class="photo-card">
-        <img src="foto1.jpg" alt="Louise Bebê">
+        <img src="foto1.jpg" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?w=500&auto=format&fit=crop'" alt="Louise Bebê">
       </div>
       <div class="photo-card">
-        <img src="foto2.jpg" alt="Louise Infância">
+        <img src="foto2.jpg" onerror="this.src='https://images.unsplash.com/photo-1511895426328-dc8714191300?w=500&auto=format&fit=crop'" alt="Louise Infância">
       </div>
       <div class="photo-card">
-        <img src="foto3.jpg" alt="Louise Atual">
+        <img src="foto3.jpg" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop'" alt="Louise Atual">
       </div>
     </div>
   </section>
@@ -226,10 +227,10 @@
     
     <div class="gift-box" style="max-width: 500px; margin: 0 auto; text-align: center;">
       <div class="icon">✨</div>
-      <h3 style="color:#ffe699; font-size: 1.4rem;">Lista de Presentes Louise</h3>
-      <p style="font-size: 0.9rem; color: #d8edff; margin-bottom: 20px;">Acesse nossa lista virtual completa e escolha o seu presente com carinho!</p>
+      <h3 style="color:#ffe699; font-size: 1.4rem;">Lista de Presentes Convitin</h3>
+      <p style="font-size: 0.9rem; color: #ebdcfc; margin-bottom: 20px;">Acesse nossa lista virtual completa e escolha o seu presente com carinho!</p>
       
-      <a href="https://convitin.com.br/lista-convitin/?list=595889" target="_blank" class="outline-btn" style="border-color: #ffe699; color: #ffe699;">
+      <a href="https://convitin.com.br/lista-louose/" target="_blank" class="outline-btn" style="border-color: #ffe699; color: #ffe699;">
         🎁 ACESSAR LISTA DE PRESENTES
       </a>
     </div>
@@ -247,7 +248,7 @@
   <footer>
     <div style="font-size:2rem; color:#ffe699;">✨</div>
     <h2 style="color: #ffe699;">Louise Victória</h2>
-    <p style="font-size:.75rem; color:#b0d3ee;">15 ANOS — 03/10/2026</p>
+    <p style="font-size:.75rem; color:#d4b3ff;">15 ANOS — 03/10/2026</p>
   </footer>
 
   <!-- Scripts -->
@@ -266,39 +267,33 @@
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    // Reprodução de Áudio Inteligente
+    // Controle da Música por Toque
     const audio = document.getElementById("bgAudio");
     const musicBtn = document.getElementById("musicBtn");
     const musicText = document.getElementById("musicText");
     const musicIcon = document.getElementById("musicIcon");
-    let isPlaying = false;
 
-    function playAudio() {
-      audio.play().then(() => {
-        isPlaying = true;
-        musicText.textContent = "Música: ON";
-        musicIcon.textContent = "🎵";
-      }).catch(err => {
-        console.log("Aguardando interação para áudio.");
-      });
-    }
-
-    // Ativar áudio no primeiro toque na tela
-    document.addEventListener('click', function() {
-      if (!isPlaying) playAudio();
-    }, { once: true });
-
-    musicBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
+    function toggleMusic(){
       if (audio.paused) {
-        playAudio();
+        audio.play().then(() => {
+          musicText.textContent = "Música: ON 🎵";
+          musicIcon.textContent = "🎵";
+        }).catch(() => {});
       } else {
         audio.pause();
-        isPlaying = false;
-        musicText.textContent = "Música: OFF";
+        musicText.textContent = "Música: OFF 🔇";
         musicIcon.textContent = "🔇";
       }
-    });
+    }
+
+    // Tenta reproduzir o som no primeiro toque do usuário
+    document.addEventListener('click', function() {
+      if (audio.paused) {
+        audio.play().then(() => {
+          musicText.textContent = "Música: ON 🎵";
+        }).catch(() => {});
+      }
+    }, { once: true });
   </script>
 </body>
 </html>
