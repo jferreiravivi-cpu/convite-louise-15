@@ -4,332 +4,208 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Louise Victória | 15 Anos</title>
-  <!-- Fonte elegante e fina (Cinzel & Cormorant Garamond) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   
   <style>
-    :root {
-      --bg-dark: #0f0a1e;
-      --purple-main: #7b2cbf;
-      --purple-light: #9d4edd;
-      --pool-blue: #70d6ff;
-      --gold: #e5a93c;
-      --text-color: #f8f9fa;
-      --card-bg: rgba(255, 255, 255, 0.07);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background: linear-gradient(135deg, var(--bg-dark), #1a0933, #081c38);
-      color: var(--text-color);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
-      padding-bottom: 50px;
-      overflow-x: hidden;
-    }
-
-    .stars-overlay {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none;
-      background: radial-gradient(circle at 50% 20%, rgba(157, 78, 221, 0.15), transparent 70%),
-                  radial-gradient(circle at 80% 80%, rgba(0, 180, 216, 0.15), transparent 70%);
-      z-index: 0;
-    }
-
-    .container {
-      position: relative;
-      z-index: 1;
-      max-width: 480px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    header {
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-
-    .subtitle-phrase {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1.2rem;
-      color: var(--gold);
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-
-    /* Nome com Fonte Fine Line e Gradiente Personalizado */
-    h1 {
-      font-family: 'Cinzel', serif;
-      font-weight: 400;
-      font-size: 2.2rem;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      background: linear-gradient(135deg, var(--pool-blue) 0%, #b8c0ff 25%, var(--purple-light) 50%, var(--gold) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 5px;
-    }
-
-    .badge {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 5px 18px;
-      border: 1px solid var(--gold);
-      border-radius: 20px;
-      color: var(--gold);
-      font-size: 0.85rem;
-      letter-spacing: 2px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 25px 20px;
-      margin-bottom: 25px;
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    }
-
-    h2 {
-      font-size: 1.3rem;
-      color: var(--pool-blue);
-      margin-bottom: 15px;
-    }
-
-    /* Contagem Regressiva */
-    .countdown-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .time-box {
-      background: rgba(0, 0, 0, 0.3);
-      padding: 12px 5px;
-      border-radius: 12px;
-      border: 1px solid rgba(157, 78, 221, 0.3);
-    }
-
-    .time-box span {
-      display: block;
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: var(--gold);
-    }
-
-    .time-box small {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      color: #aaa;
-    }
-
-    /* Botões */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 14px;
-      margin-top: 12px;
-      border: none;
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 0.95rem;
-      text-decoration: none;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .btn:active {
-      transform: scale(0.98);
-    }
-
-    .btn-wsp {
-      background: #25d366;
-      color: #fff;
-    }
-
-    .btn-maps {
-      background: linear-gradient(45deg, #4285f4, #34a853);
-      color: #fff;
-    }
-
-    .btn-cal {
-      background: rgba(255, 255, 255, 0.15);
-      color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    /* Dicas Pool Party */
-    .pool-list {
-      list-style: none;
-      text-align: left;
-      font-size: 0.95rem;
-      line-height: 1.8;
-    }
-
-    .pool-list li::before {
-      content: "💦 ";
-    }
-
-    /* Categorias da Lista de Presentes */
-    .gift-category {
-      background: rgba(0, 0, 0, 0.2);
-      border-radius: 12px;
-      padding: 14px;
-      margin-bottom: 12px;
-      text-align: left;
-    }
-
-    .gift-category h3 {
-      font-size: 1rem;
-      color: var(--gold);
-      margin-bottom: 4px;
-    }
-
-    .gift-category p {
-      font-size: 0.85rem;
-      color: #ccc;
-    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#0b0816;color:#f8f6ff;font-family:Montserrat,Arial,sans-serif;line-height:1.6}
+    .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 50% 25%,#3a2c70 0,#17102e 40%,#080611 82%)}
+    .hero:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-16%;height:42%;background:radial-gradient(ellipse at center,rgba(74,205,232,.22),transparent 62%);filter:blur(12px)}
+    .hero-content{text-align:center;position:relative;z-index:2;padding:30px 18px}
+    .orb{position:absolute;border-radius:50%;filter:blur(2px);opacity:.25}
+    .orb-one{width:40vw;height:40vw;max-width:430px;max-height:430px;left:-15%;top:10%;background:radial-gradient(circle,#a57cff,transparent 68%)}
+    .orb-two{width:35vw;height:35vw;max-width:380px;max-height:380px;right:-12%;bottom:8%;background:radial-gradient(circle,#50d7ef,transparent 68%)}
+    .eyebrow{margin:0 0 16px;color:#bcb1ff;font-size:.7rem;font-weight:700;letter-spacing:4px}
+    h1,h2,h3{font-family:Cinzel,Georgia,serif}
+    .hero h1{font-size:clamp(3.1rem,14vw,7rem);line-height:.9;letter-spacing:3px;text-transform:uppercase;margin:0;font-weight:600}
+    .hero h1 span{color:#ddd5ff}
+    .age{font-family:Cinzel,Georgia,serif;font-size:5.5rem;line-height:1;margin:28px 0 4px;background:linear-gradient(#fff,#b5ecff,#a783ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .journey{font-family:Cinzel,Georgia,serif;font-style:italic;font-size:1.05rem}
+    .date{letter-spacing:6px;color:#b9efff;font-weight:700;margin:20px 0 2px}
+    .time{font-weight:700;letter-spacing:3px}
+    .outline-btn,.primary{display:inline-block;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:13px 22px;color:#fff;text-decoration:none;font-weight:700;cursor:pointer;background:rgba(255,255,255,.07);backdrop-filter:blur(8px);transition:.25s}
+    .primary{background:linear-gradient(135deg,#8066d9,#48bdd3);border:0;box-shadow:0 14px 36px rgba(70,190,220,.18)}
+    .outline-btn:hover,.primary:hover{transform:translateY(-2px)}
+    .section{max-width:1060px;margin:auto;padding:90px 20px;text-align:center}
+    .section h2{font-size:clamp(2rem,7vw,3.3rem);line-height:1.15;margin:0 0 20px}
+    .section p{max-width:760px;margin:0 auto 22px;color:#d7d1e6}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card,.gift{padding:28px 18px;border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);box-shadow:0 20px 50px rgba(0,0,0,.16)}
+    .icon,.gift span{font-size:2rem}
+    .card h3,.gift h3{margin:9px 0 5px}
+    .card p{margin-bottom:9px}
+    .link{color:#aeefff;text-decoration:none;font-weight:700;font-size:.85rem}
+    .rsvp{background:radial-gradient(circle,rgba(125,96,214,.17),transparent 65%);border-radius:30px}
+    .hint{font-size:.78rem!important;color:#8f889f!important}
+    .timer{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:720px;margin:30px auto 0}
+    .timer div{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:18px 8px}
+    .timer b{display:block;font-family:Cinzel,serif;font-size:2.25rem;color:#bcefff}
+    .timer span{font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:#aaa3ba}
+    .pool{background:linear-gradient(180deg,rgba(60,203,231,.08),transparent);border-radius:30px}
+    .tips{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:780px;margin:30px auto 0}
+    .tips div{display:flex;flex-direction:column;gap:6px;padding:18px;border-radius:18px;background:rgba(82,195,221,.07);border:1px solid rgba(130,222,238,.1)}
+    .gift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+    .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+    .photo{min-height:270px;border-radius:22px;border:1px dashed rgba(255,255,255,.22);background:linear-gradient(145deg,#292142,#151028);display:flex;align-items:center;justify-content:center;color:#8f88a2;font-size:.72rem;letter-spacing:2px}
+    .message .quote{font-family:Georgia,serif;font-size:6rem;line-height:.6;color:#a989ff}
+    .signature{font-family:Cinzel,serif;color:#bdefff;font-size:1.2rem;margin-top:25px}
+    .calendar{padding-bottom:120px}
+    footer{text-align:center;padding:70px 20px;background:#07050e;border-top:1px solid rgba(255,255,255,.08)}
+    footer h2{margin:5px 0}
+    .footer-symbol{font-size:2rem;color:#b995ff}
+    .tiny{font-size:.72rem;color:#6f687c}
+    .pokemon-mark{position:absolute;z-index:1;font-size:8rem;opacity:.11;filter:blur(.3px)}
+    .hoopa{top:12%;left:6%;color:#b08bff}
+    .oshawott{right:7%;bottom:10%;color:#62d7ef;transform:rotate(-20deg)}
+    .stars{position:fixed;top:12%;left:4%;z-index:5;opacity:.16;color:#fff;letter-spacing:12px;pointer-events:none}
+    @media(max-width:720px){.cards,.gift-grid{grid-template-columns:1fr}.tips{grid-template-columns:repeat(2,1fr)}.photo-grid{grid-template-columns:1fr 1fr}.photo{min-height:190px}.timer{gap:7px}.timer b{font-size:1.55rem}.timer span{font-size:.56rem}.hero h1{font-size:3.1rem}.pokemon-mark{font-size:5rem}.section{padding:70px 17px}} 
   </style>
 </head>
 <body>
 
-  <div class="stars-overlay"></div>
+  <div class="stars">✦ ✦ ✦</div>
 
-  <div class="container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="pokemon-mark hoopa">🌀</div>
+    <div class="pokemon-mark oshawott">💧</div>
+
+    <div class="hero-content">
+      <p class="eyebrow">CONVITE ESPECIAL</p>
+      <h1>Louise <span>Victória</span></h1>
+      <div class="age">15</div>
+      <p class="journey">“Uma nova Jornada se inicia...”</p>
+      <p class="date">03 . 10 . 2026</p>
+      <p class="time">A PARTIR DAS 14:00H</p>
+      <div style="margin-top: 25px;">
+        <a href="#convite" class="primary">VER CONVITE</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Convite & Local -->
+  <section id="convite" class="section">
+    <h2>✨ O Convite ✨</h2>
+    <p>Prepare o seu traje de banho e venha comemorar comigo esse momento inesquecível em uma super Pool Party!</p>
     
-    <!-- Cabeçalho -->
-    <header>
-      <p class="subtitle-phrase">“Uma nova Jornada se inicia...”</p>
-      <h1>Louise Victória</h1>
-      <div class="badge">MEUS 15 ANOS</div>
-    </header>
-
-    <!-- Convite -->
-    <section class="card">
-      <h2>✨ O Convite ✨</h2>
-      <p style="line-height: 1.6; margin-bottom: 15px;">
-        Prepare o seu traje de banho e venha comemorar comigo esse momento inesquecível em uma super Pool Party!
-      </p>
-      <p><strong>📅 Data:</strong> 03/10/2026</p>
-      <p><strong>⏰ Horário:</strong> 14:00h</p>
-    </section>
-
-    <!-- Contagem Regressiva -->
-    <section class="card">
-      <h2>⏳ Contagem Regressiva</h2>
-      <div class="countdown-grid">
-        <div class="time-box"><span id="days">00</span><small>Dias</small></div>
-        <div class="time-box"><span id="hours">00</span><small>Horas</small></div>
-        <div class="time-box"><span id="minutes">00</span><small>Min</small></div>
-        <div class="time-box"><span id="seconds">00</span><small>Seg</small></div>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📅</div>
+        <h3>Data & Horário</h3>
+        <p>03 de Outubro de 2026<br>Às 14:00h</p>
       </div>
-    </section>
-
-    <!-- RSVP -->
-    <section class="card">
-      <h2>✅ Confirmação de Presença</h2>
-      <p style="font-size: 0.9rem; margin-bottom: 12px;">Por gentileza, confirme sua presença até o dia <strong>30/09/2026</strong>.</p>
-      <!-- Link do WhatsApp com mensagem pré-formatada -->
-      <a href="https://wa.me/5511963910837?text=Ol%C3%A1,%20confirmo%20minha%20presen%C3%A7a%20nos%2015%20anos%20da%20Louise%20Vict%C3%B3ria%20%F0%9F%92%9C%20(coloque%20o%20seu%20nome%20e%20de%20sua%20fam%C3%ADlia):%20" target="_blank" class="btn btn-wsp">
-        Confirmar pelo WhatsApp
-      </a>
-    </section>
-
-    <!-- Localização -->
-    <section class="card">
-      <h2>📍 Como Chegar</h2>
-      <p><strong>Rancho Xavier</strong></p>
-      <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 10px;">Rua Toca do Coelho</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Rancho+Xavier+Rua+Toca+do+Coelho" target="_blank" class="btn btn-maps">
-        Abrir no Google Maps
-      </a>
-      <!-- Link direto para adicionar no Google Agenda -->
-      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Louise+Vict%C3%B3ria+%E2%80%94+15+Anos&dates=20261003T170000Z/20261003T230000Z&details=Pool+Party+de+15+Anos+da+Louise+Vict%C3%B3ria!&location=Rancho+Xavier+-+Rua+Toca+do+Coelho" target="_blank" class="btn btn-cal">
-        📅 Adicionar à Agenda
-      </a>
-    </section>
-
-    <!-- Dicas Pool Party -->
-    <section class="card">
-      <h2>🌊 Pool Party & Dress Code</h2>
-      <ul class="pool-list">
-        <li>Usar roupas leves e confortáveis.</li>
-        <li>Não esqueça sua roupa de banho!</li>
-        <li>Traga sua toalha de praia/piscina.</li>
-        <li>Aproveite o dia ao máximo!</li>
-      </ul>
-    </section>
-
-    <!-- Lista de Presentes -->
-    <section class="card">
-      <h2>🎁 Sugestões de Presentes</h2>
-      <p style="font-size: 0.85rem; margin-bottom: 15px; color: #aaa;">Sua presença é o meu maior presente! Caso queira me presentear, aqui estão algumas sugestões:</p>
-
-      <div class="gift-category">
-        <h3>✨ Mimos / Pix</h3>
-        <p>Cotas de contribuição para realizar meus projetos e sonhos.</p>
+      <div class="card">
+        <div class="icon">📍</div>
+        <h3>Localização</h3>
+        <p>Rancho Xavier<br>Rua Toca do Coelho</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Rancho+Xavier+Rua+Toca+do+Coelho" target="_blank" class="link">ABRIR NO MAPA →</a>
       </div>
-
-      <div class="gift-category">
-        <h3>👗 Roupas & Acessórios</h3>
-        <p>Estilo leve, jovem e casual.</p>
+      <div class="card">
+        <div class="icon">🌊</div>
+        <h3>Estilo</h3>
+        <p>Pool Party Elegante<br>Moderna & Luxuosa</p>
       </div>
+    </div>
+  </section>
 
-      <div class="gift-category">
-        <h3>💄 Beleza & Cuidados</h3>
-        <p>Maquiagens, perfumes doces/suaves e itens de skincare.</p>
+  <!-- RSVP -->
+  <section class="section rsvp">
+    <h2>Confirmação de Presença</h2>
+    <p>Por gentileza, confirme sua presença até o dia <strong>30/09/2026</strong> para organizarmos tudo com carinho!</p>
+    <a href="https://wa.me/5511963910837?text=Ol%C3%A1,%20confirmo%20minha%20presen%C3%A7a%20nos%2015%20anos%20da%20Louise%20Vict%C3%B3ria%20%F0%9F%92%9C%20(coloque%20o%20seu%20nome%20e%20de%20sua%20fam%C3%ADlia):%20" target="_blank" class="primary" style="font-size: 1.1rem; padding: 16px 32px;">
+      CONFIRMAR PELO WHATSAPP 💜
+    </a>
+    <p class="hint" style="margin-top: 15px;">A mensagem já vai preenchida, é só colocar o seu nome e o de sua família!</p>
+  </section>
+
+  <!-- Contagem Regressiva -->
+  <section class="section">
+    <h2>Faltam Poucos Dias!</h2>
+    <div class="timer">
+      <div><b id="days">00</b><span>Dias</span></div>
+      <div><b id="hours">00</b><span>Horas</span></div>
+      <div><b id="minutes">00</b><span>Minutos</span></div>
+      <div><b id="seconds">00</b><span>Segundos</span></div>
+    </div>
+  </section>
+
+  <!-- Pool Party & Dress Code -->
+  <section class="section pool">
+    <h2>🌊 Pool Party & Dress Code</h2>
+    <p>Venha preparado para aproveitar o dia na piscina!</p>
+    <div class="tips">
+      <div><span>👕</span><b>Roupas Leves</b><small>Peças confortáveis para o dia</small></div>
+      <div><span>👙</span><b>Traje de Banho</b><small>Liberado para curtir a piscina</small></div>
+      <div><span>🧺</span><b>Toalha</b><small>Não esqueça de trazer a sua</small></div>
+    </div>
+  </section>
+
+  <!-- Sugestões de Presentes -->
+  <section class="section">
+    <h2>🎁 Sugestões de Presentes</h2>
+    <p>Sua presença é o meu maior presente! Caso queira me agradar, aqui estão algumas sugestões por categoria:</p>
+    
+    <div class="gift-grid">
+      <div class="gift">
+        <span>✨</span>
+        <h3>Mimos / Pix</h3>
+        <p style="font-size:0.85rem; color:#d7d1e6;">Contribuições para meus projetos e viagens.</p>
       </div>
-
-      <div class="gift-category">
-        <h3>📚 Livros & Papelaria</h3>
-        <p>Leituras e materiais de papelaria fofos.</p>
+      <div class="gift">
+        <span>👗</span>
+        <h3>Roupas & Acessórios</h3>
+        <p style="font-size:0.85rem; color:#d7d1e6;">Moda jovem, leve e casual.</p>
       </div>
-    </section>
+      <div class="gift">
+        <span>💄</span>
+        <h3>Beleza & Skincare</h3>
+        <p style="font-size:0.85rem; color:#d7d1e6;">Maquiagens, perfumes e itens de cuidados.</p>
+      </div>
+    </div>
+  </section>
 
-  </div>
+  <!-- Agenda -->
+  <section class="section calendar">
+    <h2>Não Perca a Data!</h2>
+    <p>Adicione o evento direto na sua agenda do celular:</p>
+    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Louise+Vict%C3%B3ria+%E2%80%94+15+Anos&dates=20261003T170000Z/20261003T230000Z&details=Pool+Party+de+15+Anos+da+Louise+Vict%C3%B3ria!&location=Rancho+Xavier,+Rua+Toca+do+Coelho" target="_blank" class="outline-btn">
+      📅 ADICIONAR AO GOOGLE AGENDA
+    </a>
+  </section>
 
-  <!-- Script da Contagem Regressiva Corrigido -->
+  <footer>
+    <div class="footer-symbol">✨</div>
+    <h2>Louise Victória</h2>
+    <p class="tiny">15 ANOS — 03/10/2026</p>
+  </footer>
+
+  <!-- Script da Contagem Regressiva Embutido -->
   <script>
-    function updateCountdown() {
-      // Data do evento: 03/10/2026 às 14:00:00 (Horário local)
-      const targetDate = new Date("2026-10-03T14:00:00").getTime();
-      const now = new Date().getTime();
-      const difference = targetDate - now;
+    const target = new Date("2026-10-03T14:00:00-03:00").getTime();
 
-      if (difference <= 0) {
-        document.getElementById("days").innerText = "00";
-        document.getElementById("hours").innerText = "00";
-        document.getElementById("minutes").innerText = "00";
-        document.getElementById("seconds").innerText = "00";
-        return;
-      }
+    function updateCountdown(){
+      const diff = Math.max(0, target - Date.now());
+      const days = Math.floor(diff / 86400000);
+      const hours = Math.floor((diff % 86400000) / 3600000);
+      const minutes = Math.floor((diff % 3600000) / 60000);
+      const seconds = Math.floor((diff % 60000) / 1000);
+      
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
 
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-      document.getElementById("days").innerText = String(days).padStart(2, "0");
-      document.getElementById("hours").innerText = String(hours).padStart(2, "0");
-      document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
-      document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
+      if(daysEl) daysEl.textContent = String(days).padStart(2,"0");
+      if(hoursEl) hoursEl.textContent = String(hours).padStart(2,"0");
+      if(minutesEl) minutesEl.textContent = String(minutes).padStart(2,"0");
+      if(secondsEl) secondsEl.textContent = String(seconds).padStart(2,"0");
     }
 
-    // Executa a função imediatamente e atualiza a cada 1 segundo
     updateCountdown();
     setInterval(updateCountdown, 1000);
   </script>
