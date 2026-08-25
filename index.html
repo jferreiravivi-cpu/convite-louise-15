@@ -6,27 +6,27 @@
   <title>Louise Victória | 15 Anos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:ital,wght@0,500;0,600;0,700;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   
   <style>
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:#130b2b;color:#f8f6ff;font-family:Montserrat,Arial,sans-serif;line-height:1.6}
+    body{margin:0;background:#0d1838;color:#f8f6ff;font-family:Montserrat,Arial,sans-serif;line-height:1.6}
     
-    /* Fundo com tons mais claros e iluminados */
-    .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 50% 30%,#4a3382 0,#23144d 50%,#110928 90%)}
-    .hero:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-16%;height:45%;background:radial-gradient(ellipse at center,rgba(112,214,255,.32),transparent 65%);filter:blur(14px)}
+    /* Fundo com tons mais azulados estilo piscina iluminada */
+    .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 50% 30%,#2d3b82 0,#142354 50%,#09122c 90%)}
+    .hero:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-16%;height:45%;background:radial-gradient(ellipse at center,rgba(72,219,251,.4),transparent 65%);filter:blur(14px)}
     .hero-content{text-align:center;position:relative;z-index:2;padding:30px 18px}
     
     /* Orbes Iluminados */
-    .orb{position:absolute;border-radius:50%;filter:blur(8px);opacity:.35}
-    .orb-one{width:45vw;height:45vw;max-width:480px;max-height:480px;left:-10%;top:8%;background:radial-gradient(circle,#c77dff,transparent 70%)}
-    .orb-two{width:40vw;height:40vw;max-width:420px;max-height:420px;right:-10%;bottom:6%;background:radial-gradient(circle,#70d6ff,transparent 70%)}
+    .orb{position:absolute;border-radius:50%;filter:blur(10px);opacity:.4}
+    .orb-one{width:45vw;height:45vw;max-width:480px;max-height:480px;left:-10%;top:8%;background:radial-gradient(circle,#a57cff,transparent 70%)}
+    .orb-two{width:40vw;height:40vw;max-width:420px;max-height:420px;right:-10%;bottom:6%;background:radial-gradient(circle,#48dbfb,transparent 70%)}
     
-    .eyebrow{margin:0 0 16px;color:#d8bbff;font-size:.75rem;font-weight:700;letter-spacing:4px}
+    .eyebrow{margin:0 0 16px;color:#b9efff;font-size:.75rem;font-weight:700;letter-spacing:4px}
     h1,h2,h3{font-family:'Cinzel',Georgia,serif}
     
-    /* Nome em Dourado Elegante */
+    /* Nome em Dourado Translúcido */
     .hero h1{
       font-size:clamp(3.1rem,14vw,7rem);
       line-height:.95;
@@ -34,58 +34,58 @@
       text-transform:uppercase;
       margin:0;
       font-weight:700;
-      background: linear-gradient(135deg, #ffe699 0%, #e5a93c 40%, #ffd000 70%, #fff2b2 100%);
+      color: rgba(255, 223, 128, 0.95);
+      background: linear-gradient(135deg, rgba(255, 235, 179, 0.95) 0%, rgba(229, 169, 60, 0.85) 50%, rgba(255, 215, 0, 0.95) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 4px 20px rgba(229, 169, 60, 0.3);
+      text-shadow: 0 4px 25px rgba(229, 169, 60, 0.4);
     }
     
-    .age{font-family:'Cinzel',Georgia,serif;font-size:5.5rem;line-height:1;margin:24px 0 4px;background:linear-gradient(#ffffff,#70d6ff,#c77dff);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .journey{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:1.25rem;color:#e8dff5;margin-top:10px}
-    .date{letter-spacing:6px;color:#70d6ff;font-weight:700;margin:20px 0 2px}
-    .time{font-weight:700;letter-spacing:3px;color:#e5a93c}
+    .age{font-family:'Cinzel',Georgia,serif;font-size:5.5rem;line-height:1;margin:24px 0 4px;background:linear-gradient(#ffffff,#48dbfb,#b589ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .journey{font-family:'Cinzel',Georgia,serif;font-style:italic;font-size:1.15rem;color:#e3f8ff;margin-top:10px}
+    .date{letter-spacing:6px;color:#48dbfb;font-weight:700;margin:20px 0 2px}
+    .time{font-weight:700;letter-spacing:3px;color:#ffe699}
     
     /* Botões */
-    .outline-btn,.primary{display:inline-block;border:1px solid rgba(225,169,60,.4);border-radius:999px;padding:14px 26px;color:#fff;text-decoration:none;font-weight:700;cursor:pointer;background:rgba(255,255,255,.09);backdrop-filter:blur(8px);transition:.25s}
-    .primary{background:linear-gradient(135deg,#9d4edd,#48bdd3);border:0;box-shadow:0 14px 36px rgba(112,214,255,.25)}
-    .outline-btn:hover,.primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(229,169,60,.3)}
+    .outline-btn,.primary{display:inline-block;border:1px solid rgba(225,169,60,.5);border-radius:999px;padding:14px 26px;color:#fff;text-decoration:none;font-weight:700;cursor:pointer;background:rgba(255,255,255,.09);backdrop-filter:blur(8px);transition:.25s}
+    .primary{background:linear-gradient(135deg,#8066d9,#32b2d4);border:0;box-shadow:0 14px 36px rgba(72,219,251,.3)}
+    .outline-btn:hover,.primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(229,169,60,.4)}
     
-    /* Seções e Cards com visual translúcido */
+    /* Seções e Cards */
     .section{max-width:1060px;margin:auto;padding:80px 20px;text-align:center}
     .section h2{font-size:clamp(2rem,7vw,3.2rem);line-height:1.15;margin:0 0 20px;color:#f3e8ff}
-    .section p{max-width:760px;margin:0 auto 22px;color:#e2d9f3}
+    .section p{max-width:760px;margin:0 auto 22px;color:#d8edff}
     
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card,.gift-box{padding:28px 20px;border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.15);box-shadow:0 20px 50px rgba(0,0,0,.2)}
+    .card,.gift-box{padding:28px 20px;border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.03));border:1px solid rgba(72,219,251,.25);box-shadow:0 20px 50px rgba(0,0,0,.25)}
     .icon{font-size:2.2rem;margin-bottom:10px}
-    .card h3{margin:9px 0 5px;color:#e5a93c}
-    .link{color:#70d6ff;text-decoration:none;font-weight:700;font-size:.85rem}
+    .card h3{margin:9px 0 5px;color:#ffe699}
+    .link{color:#48dbfb;text-decoration:none;font-weight:700;font-size:.85rem}
     
-    .rsvp{background:radial-gradient(circle,rgba(157,78,221,.25),transparent 70%);border-radius:30px}
-    .hint{font-size:.8rem!important;color:#b8aed0!important}
+    .rsvp{background:radial-gradient(circle,rgba(72,219,251,.2),transparent 70%);border-radius:30px}
+    .hint{font-size:.8rem!important;color:#b0d3ee!important}
     
     /* Timer */
     .timer{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:720px;margin:30px auto 0}
-    .timer div{background:rgba(255,255,255,.08);border:1px solid rgba(229,169,60,.3);border-radius:18px;padding:18px 8px}
-    .timer b{display:block;font-family:'Cinzel',serif;font-size:2.3rem;color:#70d6ff}
-    .timer span{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:#d0c7e3}
+    .timer div{background:rgba(255,255,255,.08);border:1px solid rgba(72,219,251,.3);border-radius:18px;padding:18px 8px}
+    .timer b{display:block;font-family:'Cinzel',serif;font-size:2.3rem;color:#48dbfb}
+    .timer span{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:#c0e4ff}
     
-    .pool{background:linear-gradient(180deg,rgba(112,214,255,.12),transparent);border-radius:30px}
+    .pool{background:linear-gradient(180deg,rgba(72,219,251,.15),transparent);border-radius:30px}
     .tips{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:780px;margin:30px auto 0}
-    .tips div{display:flex;flex-direction:column;gap:6px;padding:18px;border-radius:18px;background:rgba(112,214,255,.1);border:1px solid rgba(112,214,255,.2)}
+    .tips div{display:flex;flex-direction:column;gap:6px;padding:18px;border-radius:18px;background:rgba(72,219,251,.12);border:1px solid rgba(72,219,251,.25)}
     
     /* Galeria da Jornada */
     .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
-    .photo-card{border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.3);box-shadow:0 10px 30px rgba(0,0,0,.3)}
-    .photo-card img{width:100%;height:260px;object-fit:cover;display:block;transition:transform .4s}
+    .photo-card{border-radius:20px;overflow:hidden;border:1px solid rgba(72,219,251,.3);background:rgba(0,0,0,.3);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+    .photo-card img{width:100%;height:320px;object-fit:cover;display:block;transition:transform .4s}
     .photo-card:hover img{transform:scale(1.05)}
-    .photo-placeholder{height:260px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#2e1e54,#170c36);color:#bfaedb;font-size:.8rem;letter-spacing:2px;padding:15px}
 
     /* Player de Música Flutuante */
-    .music-control{position:fixed;bottom:20px;right:20px;z-index:99;background:linear-gradient(135deg,#9d4edd,#48bdd3);border:2px solid #e5a93c;border-radius:50px;padding:12px 20px;color:#fff;display:flex;align-items:center;gap:10px;font-weight:700;font-size:.85rem;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:.3s}
+    .music-control{position:fixed;bottom:20px;right:20px;z-index:99;background:linear-gradient(135deg,#8066d9,#32b2d4);border:2px solid #ffe699;border-radius:50px;padding:12px 20px;color:#fff;display:flex;align-items:center;gap:10px;font-weight:700;font-size:.85rem;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:.3s}
     .music-control:hover{transform:scale(1.05)}
 
-    /* Animações Fofas do Oshawott & Elementos */
+    /* Animações Oshawott */
     .oshawott-float{position:absolute;z-index:1;width:90px;height:auto;filter:drop-shadow(0 10px 15px rgba(0,0,0,.4));animation:bounceOshawott 4s ease-in-out infinite}
     .oshawott-one{top:15%;left:5%}
     .oshawott-two{bottom:12%;right:5%;animation-delay:2s}
@@ -95,8 +95,8 @@
       50%{transform:translateY(-15px) rotate(5deg)}
     }
 
-    .stars{position:fixed;top:10%;left:4%;z-index:5;opacity:.25;color:#e5a93c;letter-spacing:12px;pointer-events:none}
-    footer{text-align:center;padding:60px 20px;background:#090417;border-top:1px solid rgba(255,255,255,.1)}
+    .stars{position:fixed;top:10%;left:4%;z-index:5;opacity:.25;color:#ffe699;letter-spacing:12px;pointer-events:none}
+    footer{text-align:center;padding:60px 20px;background:#060d21;border-top:1px solid rgba(255,255,255,.1)}
     
     @media(max-width:720px){
       .cards,.tips,.photo-grid{grid-template-columns:1fr}
@@ -105,6 +105,7 @@
       .hero h1{font-size:3.2rem}
       .oshawott-float{width:65px}
       .section{padding:60px 18px}
+      .photo-card img{height:380px}
     }
   </style>
 </head>
@@ -113,14 +114,13 @@
   <div class="stars">✦ ✦ ✦</div>
 
   <!-- Player de Música Flutuante -->
-  <div class="music-control" id="musicBtn" onclick="toggleMusic()">
+  <div class="music-control" id="musicBtn">
     <span id="musicIcon">🎵</span>
-    <span id="musicText">Música: ON</span>
+    <span id="musicText">Toque para Ouvir 🎵</span>
   </div>
   
-  <audio id="bgAudio" loop autoplay>
-    <!-- Música tema de Pokémon (abertura em alta qualidade) -->
-    <source src="https://ia800300.us.archive.org/29/items/tvtunes_7259/Pokemon%20-%20Theme%20Song.mp3" type="audio/mpeg">
+  <audio id="bgAudio" loop preload="auto">
+    <source src="https://assets.mixkit.co/music/preview/mixkit-game-level-music-689.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Hero Section -->
@@ -128,7 +128,6 @@
     <div class="orb orb-one"></div>
     <div class="orb orb-two"></div>
     
-    <!-- Oshawott fofo flutuando -->
     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/501.png" alt="Oshawott" class="oshawott-float oshawott-one">
     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/501.png" alt="Oshawott" class="oshawott-float oshawott-two" style="transform: scaleX(-1);">
 
@@ -198,14 +197,13 @@
     
     <div class="photo-grid">
       <div class="photo-card">
-        <!-- Substitua o link abaixo pela foto real da Louise quando quiser -->
-        <div class="photo-placeholder">FOTO 01 — MEMÓRIAS 💖</div>
+        <img src="foto1.jpg" alt="Louise Bebê">
       </div>
       <div class="photo-card">
-        <div class="photo-placeholder">FOTO 02 — CRESCIMENTO 🌸</div>
+        <img src="foto2.jpg" alt="Louise Infância">
       </div>
       <div class="photo-card">
-        <div class="photo-placeholder">FOTO 03 — 15 ANOS ✨</div>
+        <img src="foto3.jpg" alt="Louise Atual">
       </div>
     </div>
   </section>
@@ -221,19 +219,18 @@
     </div>
   </section>
 
-  <!-- Sugestões de Presentes (Com 1 Link Único) -->
+  <!-- Sugestões de Presentes -->
   <section class="section">
     <h2>🎁 Sugestões de Presentes</h2>
-    <p>Sua presença é o meu maior presente! Caso queira me agradar com um mimo ou contribuição:</p>
+    <p>Sua presença é o meu maior presente! Caso queira me agradar com um mimo:</p>
     
     <div class="gift-box" style="max-width: 500px; margin: 0 auto; text-align: center;">
       <div class="icon">✨</div>
-      <h3 style="color:#e5a93c; font-size: 1.4rem;">Lista de Presentes & Mimos</h3>
-      <p style="font-size: 0.9rem; color: #e2d9f3; margin-bottom: 20px;">Acesse nossa lista virtual ou contribua via Pix com qualquer valor para realizar meus sonhos nesta nova fase!</p>
+      <h3 style="color:#ffe699; font-size: 1.4rem;">Lista de Presentes Convitin</h3>
+      <p style="font-size: 0.9rem; color: #d8edff; margin-bottom: 20px;">Acesse nossa lista virtual completa e escolha o seu presente com carinho!</p>
       
-      <!-- Substitua o '#' pelo seu link de presentes do Pix ou loja -->
-      <a href="#" target="_blank" class="outline-btn" style="border-color: #e5a93c; color: #ffe699;">
-        🎁 ACESSAR LISTA / PIX
+      <a href="https://convitin.com.br/lista-convitin/?list=595889" target="_blank" class="outline-btn" style="border-color: #ffe699; color: #ffe699;">
+        🎁 ACESSAR LISTA DE PRESENTES
       </a>
     </div>
   </section>
@@ -248,56 +245,60 @@
   </section>
 
   <footer>
-    <div style="font-size:2rem; color:#e5a93c;">✨</div>
+    <div style="font-size:2rem; color:#ffe699;">✨</div>
     <h2 style="color: #ffe699;">Louise Victória</h2>
-    <p style="font-size:.75rem; color:#a297be;">15 ANOS — 03/10/2026</p>
+    <p style="font-size:.75rem; color:#b0d3ee;">15 ANOS — 03/10/2026</p>
   </footer>
 
-  <!-- Scripts: Contagem e Música -->
+  <!-- Scripts -->
   <script>
-    // Lógica da Contagem Regressiva
+    // Contagem Regressiva
     const target = new Date("2026-10-03T14:00:00-03:00").getTime();
 
     function updateCountdown(){
       const diff = Math.max(0, target - Date.now());
-      const days = Math.floor(diff / 86400000);
-      const hours = Math.floor((diff % 86400000) / 3600000);
-      const minutes = Math.floor((diff % 3600000) / 60000);
-      const seconds = Math.floor((diff % 60000) / 1000);
-      
-      document.getElementById("days").textContent = String(days).padStart(2,"0");
-      document.getElementById("hours").textContent = String(hours).padStart(2,"0");
-      document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
-      document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
+      document.getElementById("days").textContent = String(Math.floor(diff / 86400000)).padStart(2,"0");
+      document.getElementById("hours").textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2,"0");
+      document.getElementById("minutes").textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2,"0");
+      document.getElementById("seconds").textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,"0");
     }
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    // Lógica do Controle de Áudio
+    // Reprodução de Áudio Inteligente
     const audio = document.getElementById("bgAudio");
     const musicBtn = document.getElementById("musicBtn");
     const musicText = document.getElementById("musicText");
     const musicIcon = document.getElementById("musicIcon");
+    let isPlaying = false;
 
-    // Tentar dar play automático ao interagir
-    document.body.addEventListener('click', function() {
-      if (audio.paused && musicText.textContent === "Música: ON") {
-        audio.play().catch(() => {});
-      }
-    }, { once: true });
-
-    function toggleMusic(){
-      if(audio.paused){
-        audio.play();
+    function playAudio() {
+      audio.play().then(() => {
+        isPlaying = true;
         musicText.textContent = "Música: ON";
         musicIcon.textContent = "🎵";
+      }).catch(err => {
+        console.log("Aguardando interação para áudio.");
+      });
+    }
+
+    // Ativar áudio no primeiro toque na tela
+    document.addEventListener('click', function() {
+      if (!isPlaying) playAudio();
+    }, { once: true });
+
+    musicBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (audio.paused) {
+        playAudio();
       } else {
         audio.pause();
+        isPlaying = false;
         musicText.textContent = "Música: OFF";
         musicIcon.textContent = "🔇";
       }
-    }
+    });
   </script>
 </body>
 </html>
