@@ -75,15 +75,21 @@
     .tips{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:780px;margin:30px auto 0}
     .tips div{display:flex;flex-direction:column;gap:6px;padding:18px;border-radius:18px;background:rgba(157,78,221,.15);border:1px solid rgba(229,169,60,.3)}
     
-    /* Galeria da Jornada */
+    /* Galeria da Jornada - Ajustada para não cortar fotos */
     .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
-    .photo-card{border-radius:20px;overflow:hidden;border:2px solid rgba(229,169,60,.4);background:rgba(0,0,0,.3);box-shadow:0 10px 30px rgba(0,0,0,.4)}
-    .photo-card img{width:100%;height:320px;object-fit:cover;display:block;transition:transform .4s}
-    .photo-card:hover img{transform:scale(1.05)}
+    .photo-card{border-radius:20px;overflow:hidden;border:2px solid rgba(229,169,60,.4);background:rgba(19, 10, 42, 0.8);box-shadow:0 10px 30px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;height:350px}
+    .photo-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+    .photo-card img.fit-photo{object-fit:contain}
+    .photo-card:hover img{transform:scale(1.03)}
 
     /* Player de Música Flutuante */
-    .music-control{position:fixed;bottom:20px;right:20px;z-index:99;background:linear-gradient(135deg,#9d4edd,#e5a93c);border:2px solid #ffe699;border-radius:50px;padding:12px 20px;color:#fff;display:flex;align-items:center;gap:10px;font-weight:700;font-size:.85rem;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:.3s}
-    .music-control:hover{transform:scale(1.05)}
+    .music-control{position:fixed;bottom:20px;right:20px;z-index:999;background:linear-gradient(135deg,#9d4edd,#e5a93c);border:2px solid #ffe699;border-radius:50px;padding:14px 22px;color:#fff;display:flex;align-items:center;gap:10px;font-weight:700;font-size:.9rem;cursor:pointer;box-shadow:0 10px 35px rgba(0,0,0,.6);animation:pulseMusic 2s infinite}
+    
+    @keyframes pulseMusic {
+      0%{transform:scale(1);box-shadow:0 0 0 0 rgba(229,169,60,.7)}
+      70%{transform:scale(1.05);box-shadow:0 0 0 15px rgba(229,169,60,0)}
+      100%{transform:scale(1);box-shadow:0 0 0 0 rgba(229,169,60,0)}
+    }
 
     /* Animações Oshawott */
     .oshawott-float{position:absolute;z-index:1;width:90px;height:auto;filter:drop-shadow(0 10px 15px rgba(0,0,0,.4));animation:bounceOshawott 4s ease-in-out infinite}
@@ -105,7 +111,7 @@
       .hero h1{font-size:3.2rem}
       .oshawott-float{width:65px}
       .section{padding:60px 18px}
-      .photo-card img{height:380px}
+      .photo-card{height:380px}
     }
   </style>
 </head>
@@ -113,16 +119,17 @@
 
   <div class="stars">✦ ✦ ✦</div>
 
-  <!-- Player de Música Flutuante -->
+  <!-- Player de Música Flutuante com Botão de Ação -->
   <div class="music-control" id="musicBtn" onclick="toggleMusic()">
     <span id="musicIcon">🎵</span>
-    <span id="musicText">Toque para Ouvir 🎵</span>
+    <span id="musicText">CLIQUE AQUI PARA OUVIR A MÚSICA 🎵</span>
   </div>
   
-  <!-- Áudio apontado para o arquivo exato do seu GitHub -->
+  <!-- Múltiplos formatos para garantir o carregamento do áudio -->
   <audio id="bgAudio" loop preload="auto">
-    <source src="musica.mp3.mp3" type="audio/mpeg">
     <source src="musica.mp3" type="audio/mpeg">
+    <source src="musica.mp3.mp3" type="audio/mpeg">
+    <source src="musica.mp3.mp3.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Hero Section -->
@@ -192,20 +199,20 @@
     </div>
   </section>
 
-  <!-- 📸 Galeria da Jornada (Apontando para .jpeg do seu repositório) -->
+  <!-- 📸 Galeria da Jornada -->
   <section class="section">
     <h2>📸 A Jornada da Louise</h2>
     <p>Alguns momentos marcantes até a chegada dos meus 15 anos!</p>
     
     <div class="photo-grid">
       <div class="photo-card">
-        <img src="foto1.jpeg" onerror="this.src='foto1.jpg.jpeg'" alt="Louise Bebê">
+        <img src="foto1.jpeg" onerror="this.src='foto1.jpg'" alt="Louise Bebê">
       </div>
       <div class="photo-card">
-        <img src="foto2.jpeg" onerror="this.src='foto2.jpg.jpeg'" alt="Louise Infância">
+        <img src="foto2.jpeg" onerror="this.src='foto2.jpg'" alt="Louise Infância">
       </div>
       <div class="photo-card">
-        <img src="foto3.jpeg" onerror="this.src='foto3.jpg.jpeg'" alt="Louise Atual">
+        <img src="foto3.png" class="fit-photo" onerror="this.src='foto3.jpeg'" alt="Louise Atual">
       </div>
     </div>
   </section>
@@ -277,24 +284,32 @@
     function toggleMusic(){
       if (audio.paused) {
         audio.play().then(() => {
-          musicText.textContent = "Música: ON 🎵";
-          musicIcon.textContent = "🎵";
-        }).catch(() => {});
+          musicText.textContent = "Música Tocando 🎵 (Toque p/ Pausar)";
+          musicIcon.textContent = "🔊";
+          musicBtn.style.animation = "none";
+        }).catch((e) => {
+          console.log("Erro ao tentar tocar o áudio: ", e);
+        });
       } else {
         audio.pause();
-        musicText.textContent = "Música: OFF 🔇";
+        musicText.textContent = "Música Pausada 🔇 (Toque p/ Tocar)";
         musicIcon.textContent = "🔇";
       }
     }
 
-    // Tenta tocar no primeiro clique na tela
-    document.addEventListener('click', function() {
+    // Tenta reproduzir no primeiro toque em qualquer parte da tela
+    document.addEventListener('touchstart', playAudioOnInteraction, { once: true });
+    document.addEventListener('click', playAudioOnInteraction, { once: true });
+
+    function playAudioOnInteraction() {
       if (audio.paused) {
         audio.play().then(() => {
-          musicText.textContent = "Música: ON 🎵";
+          musicText.textContent = "Música Tocando 🎵 (Toque p/ Pausar)";
+          musicIcon.textContent = "🔊";
+          musicBtn.style.animation = "none";
         }).catch(() => {});
       }
-    }, { once: true });
+    }
   </script>
 </body>
 </html>
