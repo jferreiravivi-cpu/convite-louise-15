@@ -13,12 +13,10 @@
     html{scroll-behavior:smooth}
     body{margin:0;background:#130a2a;color:#f8f6ff;font-family:Montserrat,Arial,sans-serif;line-height:1.6}
     
-    /* Fundo Roxo, Lilás e Dourado */
     .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle at 50% 30%,#3d1f6d 0,#200d43 50%,#0e0521 90%)}
     .hero:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-16%;height:45%;background:radial-gradient(ellipse at center,rgba(229,169,60,.25),transparent 65%);filter:blur(14px)}
     .hero-content{text-align:center;position:relative;z-index:2;padding:30px 18px}
     
-    /* Orbes Iluminados */
     .orb{position:absolute;border-radius:50%;filter:blur(10px);opacity:.45}
     .orb-one{width:45vw;height:45vw;max-width:480px;max-height:480px;left:-10%;top:8%;background:radial-gradient(circle,#b368ff,transparent 70%)}
     .orb-two{width:40vw;height:40vw;max-width:420px;max-height:420px;right:-10%;bottom:6%;background:radial-gradient(circle,#e5a93c,transparent 70%)}
@@ -26,7 +24,6 @@
     .eyebrow{margin:0 0 16px;color:#d4b3ff;font-size:.75rem;font-weight:700;letter-spacing:4px}
     h1,h2,h3{font-family:'Cinzel',Georgia,serif}
     
-    /* Nome em Dourado Translúcido */
     .hero h1{
       font-size:clamp(3.1rem,14vw,7rem);
       line-height:.95;
@@ -46,12 +43,10 @@
     .date{letter-spacing:6px;color:#d4b3ff;font-weight:700;margin:20px 0 2px}
     .time{font-weight:700;letter-spacing:3px;color:#ffe699}
     
-    /* Botões */
     .outline-btn,.primary{display:inline-block;border:1px solid rgba(225,169,60,.6);border-radius:999px;padding:14px 26px;color:#fff;text-decoration:none;font-weight:700;cursor:pointer;background:rgba(255,255,255,.09);backdrop-filter:blur(8px);transition:.25s}
     .primary{background:linear-gradient(135deg,#9d4edd,#e5a93c);border:0;box-shadow:0 14px 36px rgba(157,78,221,.35)}
     .outline-btn:hover,.primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(229,169,60,.4)}
     
-    /* Seções e Cards */
     .section{max-width:1060px;margin:auto;padding:80px 20px;text-align:center}
     .section h2{font-size:clamp(2rem,7vw,3.2rem);line-height:1.15;margin:0 0 20px;color:#f3e8ff}
     .section p{max-width:760px;margin:0 auto 22px;color:#ebdcfc}
@@ -65,7 +60,6 @@
     .rsvp{background:radial-gradient(circle,rgba(157,78,221,.3),transparent 70%);border-radius:30px}
     .hint{font-size:.8rem!important;color:#d4c4ee!important}
     
-    /* Timer */
     .timer{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:720px;margin:30px auto 0}
     .timer div{background:rgba(255,255,255,.08);border:1px solid rgba(229,169,60,.3);border-radius:18px;padding:18px 8px}
     .timer b{display:block;font-family:'Cinzel',serif;font-size:2.3rem;color:#ffe699}
@@ -75,7 +69,6 @@
     .tips{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:780px;margin:30px auto 0}
     .tips div{display:flex;flex-direction:column;gap:6px;padding:18px;border-radius:18px;background:rgba(157,78,221,.15);border:1px solid rgba(229,169,60,.3)}
     
-    /* Galeria da Jornada - Ajustada para não cortar fotos */
     .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
     .photo-card{border-radius:20px;overflow:hidden;border:2px solid rgba(229,169,60,.4);background:rgba(19, 10, 42, 0.8);box-shadow:0 10px 30px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;height:350px}
     .photo-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
@@ -83,15 +76,10 @@
     .photo-card:hover img{transform:scale(1.03)}
 
     /* Player de Música Flutuante */
-    .music-control{position:fixed;bottom:20px;right:20px;z-index:999;background:linear-gradient(135deg,#9d4edd,#e5a93c);border:2px solid #ffe699;border-radius:50px;padding:14px 22px;color:#fff;display:flex;align-items:center;gap:10px;font-weight:700;font-size:.9rem;cursor:pointer;box-shadow:0 10px 35px rgba(0,0,0,.6);animation:pulseMusic 2s infinite}
-    
-    @keyframes pulseMusic {
-      0%{transform:scale(1);box-shadow:0 0 0 0 rgba(229,169,60,.7)}
-      70%{transform:scale(1.05);box-shadow:0 0 0 15px rgba(229,169,60,0)}
-      100%{transform:scale(1);box-shadow:0 0 0 0 rgba(229,169,60,0)}
-    }
+    .music-bar{position:fixed;bottom:20px;right:20px;left:20px;max-width:380px;margin:0 auto;z-index:9999;background:rgba(20, 10, 40, 0.95);border:2px solid #ffe699;border-radius:50px;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 10px 35px rgba(0,0,0,.8);backdrop-filter:blur(10px)}
+    .music-info{display:flex;align-items:center;gap:10px;color:#ffe699;font-size:.85rem;font-weight:600}
+    .play-btn{background:linear-gradient(135deg,#9d4edd,#e5a93c);border:none;border-radius:50px;color:#fff;padding:8px 18px;font-weight:700;font-size:.8rem;cursor:pointer;box-shadow:0 4px 15px rgba(0,0,0,.3)}
 
-    /* Animações Oshawott */
     .oshawott-float{position:absolute;z-index:1;width:90px;height:auto;filter:drop-shadow(0 10px 15px rgba(0,0,0,.4));animation:bounceOshawott 4s ease-in-out infinite}
     .oshawott-one{top:15%;left:5%}
     .oshawott-two{bottom:12%;right:5%;animation-delay:2s}
@@ -102,7 +90,7 @@
     }
 
     .stars{position:fixed;top:10%;left:4%;z-index:5;opacity:.25;color:#ffe699;letter-spacing:12px;pointer-events:none}
-    footer{text-align:center;padding:60px 20px;background:#090317;border-top:1px solid rgba(255,255,255,.1)}
+    footer{text-align:center;padding:60px 20px 120px;background:#090317;border-top:1px solid rgba(255,255,255,.1)}
     
     @media(max-width:720px){
       .cards,.tips,.photo-grid{grid-template-columns:1fr}
@@ -119,17 +107,19 @@
 
   <div class="stars">✦ ✦ ✦</div>
 
-  <!-- Player de Música Flutuante com Botão de Ação -->
-  <div class="music-control" id="musicBtn" onclick="toggleMusic()">
-    <span id="musicIcon">🎵</span>
-    <span id="musicText">CLIQUE AQUI PARA OUVIR A MÚSICA 🎵</span>
+  <!-- Player de Música -->
+  <div class="music-bar">
+    <div class="music-info">
+      <span id="musicIcon">🎵</span>
+      <span id="musicStatus">Música do Convite</span>
+    </div>
+    <button class="play-btn" id="playToggleBtn" onclick="toggleAudio()">TOCAR 🔊</button>
   </div>
   
-  <!-- Múltiplos formatos para garantir o carregamento do áudio -->
+  <!-- Múltiplas fontes de retentativa do arquivo de áudio -->
   <audio id="bgAudio" loop preload="auto">
     <source src="musica.mp3" type="audio/mpeg">
     <source src="musica.mp3.mp3" type="audio/mpeg">
-    <source src="musica.mp3.mp3.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Hero Section -->
@@ -148,7 +138,7 @@
       <p class="date">03 . 10 . 2026</p>
       <p class="time">A PARTIR DAS 14:00H</p>
       <div style="margin-top: 25px;">
-        <a href="#convite" class="primary">VER CONVITE</a>
+        <a href="#convite" class="primary" onclick="startAudioExplicit()">VER CONVITE</a>
       </div>
     </div>
   </section>
@@ -245,7 +235,7 @@
   </section>
 
   <!-- Agenda -->
-  <section class="section" style="padding-bottom: 120px;">
+  <section class="section">
     <h2>Não Perca a Data!</h2>
     <p>Adicione o evento direto na sua agenda do celular:</p>
     <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Louise+Vict%C3%B3ria+%E2%80%94+15+Anos&dates=20261003T170000Z/20261003T230000Z&details=Pool+Party+de+15+Anos+da+Louise+Vict%C3%B3ria!&location=Rancho+Xavier,+Rua+Toca+do+Coelho" target="_blank" class="outline-btn">
@@ -259,9 +249,7 @@
     <p style="font-size:.75rem; color:#d4b3ff;">15 ANOS — 03/10/2026</p>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // Contagem Regressiva
     const target = new Date("2026-10-03T14:00:00-03:00").getTime();
 
     function updateCountdown(){
@@ -275,41 +263,42 @@
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    // Controle da Música por Toque
     const audio = document.getElementById("bgAudio");
-    const musicBtn = document.getElementById("musicBtn");
-    const musicText = document.getElementById("musicText");
-    const musicIcon = document.getElementById("musicIcon");
+    const playBtn = document.getElementById("playToggleBtn");
+    const musicStatus = document.getElementById("musicStatus");
 
-    function toggleMusic(){
+    function toggleAudio() {
       if (audio.paused) {
         audio.play().then(() => {
-          musicText.textContent = "Música Tocando 🎵 (Toque p/ Pausar)";
-          musicIcon.textContent = "🔊";
-          musicBtn.style.animation = "none";
-        }).catch((e) => {
-          console.log("Erro ao tentar tocar o áudio: ", e);
+          playBtn.textContent = "PAUSAR 🔇";
+          musicStatus.textContent = "Tocando 🎵";
+        }).catch(err => {
+          alert("Ainda não foi possível encontrar o arquivo musica.mp3 no GitHub. Verifique se salvou a alteração do nome.");
         });
       } else {
         audio.pause();
-        musicText.textContent = "Música Pausada 🔇 (Toque p/ Tocar)";
-        musicIcon.textContent = "🔇";
+        playBtn.textContent = "TOCAR 🔊";
+        musicStatus.textContent = "Pausado";
       }
     }
 
-    // Tenta reproduzir no primeiro toque em qualquer parte da tela
-    document.addEventListener('touchstart', playAudioOnInteraction, { once: true });
-    document.addEventListener('click', playAudioOnInteraction, { once: true });
-
-    function playAudioOnInteraction() {
+    function startAudioExplicit() {
       if (audio.paused) {
         audio.play().then(() => {
-          musicText.textContent = "Música Tocando 🎵 (Toque p/ Pausar)";
-          musicIcon.textContent = "🔊";
-          musicBtn.style.animation = "none";
+          playBtn.textContent = "PAUSAR 🔇";
+          musicStatus.textContent = "Tocando 🎵";
         }).catch(() => {});
       }
     }
+
+    document.addEventListener('click', function() {
+      if (audio.paused) {
+        audio.play().then(() => {
+          playBtn.textContent = "PAUSAR 🔇";
+          musicStatus.textContent = "Tocando 🎵";
+        }).catch(() => {});
+      }
+    }, { once: true });
   </script>
 </body>
 </html>
